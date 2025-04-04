@@ -45,9 +45,6 @@ npm run dev
 ![Screenshot 1](path/to/screenshot1.png)
 ![Screenshot 2](path/to/screenshot2.png)
 
-## 📜 License
-This project is licensed under the **MIT License**.
-
 ## 🤝 Contributing
 Feel free to fork this repo and submit pull requests!
 
