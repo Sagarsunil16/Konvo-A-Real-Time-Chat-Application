@@ -11,12 +11,13 @@ import {Loader} from 'lucide-react'
 import { Toaster } from "react-hot-toast";
 import useThemeStore from "./store/useThemeStore";
 const App = () => {
-  const {authUser,checkAuth,isCheckingAuth} = useAuthStore() 
+  const {authUser,checkAuth,isCheckingAuth,onlineUsers} = useAuthStore() 
   const{theme,} = useThemeStore()
   useEffect(()=>{
     checkAuth()
   },[checkAuth])
   console.log("App component is mounted");
+  console.log(onlineUsers,"Online users")
   console.log({authUser})
   if(isCheckingAuth && !authUser) return (
     <div className="flex items-center justify-center h-screen">
