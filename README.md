@@ -1,6 +1,6 @@
-# Whispr - Real-Time Chat Application
+# Konvo - Real-Time Chat Application
 
-Whispr is a real-time chat application built using the **MERN** stack with **Socket.io** for instant messaging.
+Konvo is a real-time chat application built using the **MERN** stack with **Socket.io** for instant messaging.
 
 ## ✨ Features
 - 🎃 **Authentication & Authorization** using JWT
@@ -20,8 +20,8 @@ Whispr is a real-time chat application built using the **MERN** stack with **Soc
 ## ⚡ Installation & Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/whispr.git  
-cd whispr  
+git clone https://github.com/yourusername/Konvo.git  
+cd Konvo  
 
 # Install dependencies for both client & server  
 cd client && npm install  
