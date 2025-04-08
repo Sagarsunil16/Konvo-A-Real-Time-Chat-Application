@@ -40,7 +40,8 @@ npm run dev
 cd ../client  
 npm run dev  
 ```
-
+## ⚡ Live link
+  https://konvo-2wae.onrender.com/
 ## 📷 Screenshots
 ![Screenshot 1](path/to/screenshot1.png)
 ![Screenshot 2](path/to/screenshot2.png)
