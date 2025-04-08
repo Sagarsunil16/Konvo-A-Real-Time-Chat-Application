@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-const useThemeStore = create((set)=>({
+ export const useThemeStore = create((set)=>({
     theme:localStorage.getItem("chat-theme") || "light",
     setTheme:(theme)=>{
         localStorage.setItem("chat-theme",theme)
@@ -8,4 +8,3 @@ const useThemeStore = create((set)=>({
     }
 }))
 
-export default useThemeStore

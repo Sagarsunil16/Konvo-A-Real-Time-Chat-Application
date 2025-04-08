@@ -11,13 +11,12 @@ const ChatContainer = () => {
     useChatStore();
     const {authUser} = useAuthStore()
     const messageEndRef = useRef(null)
-  console.log(selectedUser, "in the chat contai");
   useEffect(() => {
     getMessages(selectedUser._id);
     subscribeToMessages()
     
     return ()=> unsubscribeFromMessages()
-  }, [selectedUser._id.getMessages,subscribeToMessages,unsubscribeFromMessages]);
+  }, [selectedUser._id,getMessages,subscribeToMessages,unsubscribeFromMessages]);
 
   useEffect(()=>{
     if(messageEndRef.current && messages){
@@ -32,11 +31,6 @@ const ChatContainer = () => {
     </div> 
   }
 
-  const scrollDown = ()=>{
-
-  }
-
- 
   return (  
     <div className="flex-1 flex flex-col overflow-auto ">
       <ChatHeader/>

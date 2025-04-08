@@ -9,23 +9,29 @@ import ProfilePage from "./pages/ProfilePage";
 import { useAuthStore } from "./store/useAuthStore";
 import {Loader} from 'lucide-react'
 import { Toaster } from "react-hot-toast";
-import useThemeStore from "./store/useThemeStore";
+import {useThemeStore} from "./store/useThemeStore";
 const App = () => {
   const {authUser,checkAuth,isCheckingAuth,onlineUsers} = useAuthStore() 
-  const{theme,} = useThemeStore()
+  const{theme} = useThemeStore()
   useEffect(()=>{
     checkAuth()
   },[checkAuth])
-  console.log("App component is mounted");
-  console.log(onlineUsers,"Online users")
-  console.log({authUser})
+
+  console.log(theme,"themes")
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   if(isCheckingAuth && !authUser) return (
     <div className="flex items-center justify-center h-screen">
       <Loader className="size-10 animate-spin"/>
     </div>
   )
+
+
+  
   return (
-    <div data-theme={theme}>
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={authUser?<HomePage />:<Navigate to={'/login'}/>} />

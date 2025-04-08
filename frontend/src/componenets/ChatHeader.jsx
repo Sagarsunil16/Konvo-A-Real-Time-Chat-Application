@@ -1,7 +1,8 @@
 
-import { X } from "lucide-react";
+import { X, VideoIcon } from "lucide-react";
 import  {useAuthStore}  from "../store/useAuthStore";
 import  useChatStore  from "../store/useChatStore";
+import toast from "react-hot-toast";
 
 const ChatHeader = () => {
   const { selectedUser, setSelectedUser } = useChatStore();
@@ -28,9 +29,15 @@ const ChatHeader = () => {
         </div>
 
         {/* Close button */}
+        <div className="flex gap-3">
+        <button onClick={()=>toast("🚧 Coming soon...")}>
+          <VideoIcon />
+        </button>
         <button onClick={() => setSelectedUser(null)}>
           <X />
         </button>
+        </div>
+       
       </div>
     </div>
   );
